@@ -1,5 +1,5 @@
 {
-    "name": "kint-php/kint",
+    "name": "khoosys/kint",
     "description": "Kint - Advanced PHP dumper",
     "keywords": ["dump", "debug"],
     "type": "library",
