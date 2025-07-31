@@ -1,5 +1,5 @@
 <?php
-
+ 
 declare(strict_types=1);
 
 /*
@@ -85,4 +85,27 @@ if (!\function_exists('s')) {
     }
 
     Kint::$aliases[] = 's';
+}
+
+if (!\function_exists('dd')) {
+	function dd(...$vars)
+	{
+        if (!Kint::$enabled_mode) {
+            return 0;
+        }
+		Kint::dump(...$vars);
+		exit;
+	}
+	Kint::$aliases[] = 'dd';
+}
+
+if (!\function_exists('ddd')) {
+	function ddd()
+	{
+        if (!Kint::$enabled_mode) {
+            return 0;
+        }
+		die ('here');
+	}
+	Kint::$aliases[] = 'ddd';
 }
